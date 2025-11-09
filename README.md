@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/crayfishx/puppet-purge.svg?branch=master)](https://travis-ci.org/crayfishx/puppet-purge) 
+[![Build Status](https://travis-ci.org/obmondo/puppet-purge.svg?branch=master)](https://travis-ci.org/obmondo/puppet-purge)
 
-# purge 
+# purge
 
 This is a metatype to purge resources from the agent. It behaves in a similar way to the 'resources' type native in Puppet but offers more finite control over the criteria in which resources are purged.
 
@@ -97,7 +97,7 @@ Multiple criterias can be nested in an array, eg:
 ```puppet
    purge { 'user':
      unless => [
-       [ 'name', '==', 'root' ], 
+       [ 'name', '==', 'root' ],
        [ 'name', '=~', '^admin' ]
      ]
   }
@@ -215,8 +215,8 @@ The exception to this rule is using two separate resource declarations using the
 
 In the above example, if the user `admin` has a UID above 9000 it will be purged.  This is because the first resource declaration in this example is evaluated separately from the second and identifies the resource as purgable.  The second resource evaluates it as non-purgable, but that is a non-action (eg: do nothing)
 
-   
-    
+
+
 
 ## Safe usage notes
 
@@ -235,8 +235,11 @@ If you are using the above pattern to source the options from Hiera, you probabl
 
 ## Author
 
-Written and maintained by Craig Dunn <craig@craigdunn.org> (@crayfishx)
+Written and maintained by Ashish Jaiswal <ashish@obmondo.com> (@obmondo)
 
-##
+## Original Author
+
+Craig Dunn <craig@craigdunn.org> (@crayfishx)
+
 
 Licensed under the Apache 2.0 license.  See LICENSE for details.
