@@ -1,6 +1,6 @@
 {
   "name": "obmondo-purge",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "author": "obmondo",
   "summary": "A puppet meta-type for purging resources based on criteria",
   "tags": [ "resources", "purge" ],
